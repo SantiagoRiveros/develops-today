@@ -11,7 +11,6 @@ import {
   Legend,
 } from "chart.js";
 
-// Registrar los elementos de Chart.js
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -23,11 +22,9 @@ ChartJS.register(
 );
 
 const PopulationChart = ({ data }) => {
-  // Extraer años y valores de la data
   const labels = data.map((entry) => entry.year);
   const values = data.map((entry) => entry.value);
 
-  // Configuración de los datos para el gráfico
   const chartData = {
     labels,
     datasets: [
@@ -42,7 +39,6 @@ const PopulationChart = ({ data }) => {
     ],
   };
 
-  // Configuración de las opciones del gráfico
   const options = {
     responsive: true,
     plugins: {
@@ -51,20 +47,20 @@ const PopulationChart = ({ data }) => {
       },
       title: {
         display: true,
-        text: "Evolución de la Población",
+        text: "Evolution of the population",
       },
     },
     scales: {
       x: {
         title: {
           display: true,
-          text: "Año",
+          text: "Year",
         },
       },
       y: {
         title: {
           display: true,
-          text: "Población",
+          text: "Population",
         },
       },
     },

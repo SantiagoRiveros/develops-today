@@ -7,15 +7,13 @@ import axios from "axios";
 export default function CountryInfo() {
   const { code } = useParams();
   const [countryData, setCountryData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); // Loader para esta página
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Agregar estado para manejar el botón de navegación
-  const [isButtonClicked, setIsButtonClicked] = useState(false); // Estado para mostrar loader durante la carga de datos
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
 
   useEffect(() => {
     if (!code) return;
 
-    // Setea el estado de isButtonClicked a true cuando se hace click
     setIsButtonClicked(true);
 
     axios
@@ -29,7 +27,7 @@ export default function CountryInfo() {
         setIsLoading(false);
       })
       .finally(() => {
-        setIsButtonClicked(false); // Cuando termina la carga de datos, reseteamos el estado
+        setIsButtonClicked(false);
       });
   }, [code]);
 
@@ -64,7 +62,7 @@ export default function CountryInfo() {
             <Link
               to={`/country/${border.countryCode}`}
               className={styles.borderLink}
-              onClick={() => setIsButtonClicked(true)} // Al hacer click en el enlace, muestra el loader
+              onClick={() => setIsButtonClicked(true)}
             >
               {border.commonName}
             </Link>

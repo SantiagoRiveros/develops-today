@@ -4,8 +4,7 @@ const { getCountryInfo } = require("../controllers/getCountryInfo");
 
 const router = express.Router();
 
-// Rutas
-router.get("/countries", getAvailableCountries); // Endpoint to get available countries
-router.get("/country/:code", getCountryInfo); // Endpoint yo get country info
+router.get("/countries", getAvailableCountries);
+router.get("/country/:code", getCountryInfo);
 
 module.exports = router;

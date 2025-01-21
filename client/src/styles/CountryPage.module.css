@@ -1,4 +1,4 @@
-/* Estilos principales */
+/* main styles */
 .container {
   display: flex;
   flex-direction: column;
@@ -24,8 +24,8 @@ h1 {
 }
 
 .loader {
-  border: 6px solid #f3f3f3; /* Color claro */
-  border-top: 6px solid #3498db; /* Color principal */
+  border: 6px solid #f3f3f3; /* light color */
+  border-top: 6px solid #3498db; /* main color */
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -42,7 +42,7 @@ h1 {
   }
 }
 
-/* Lista de países */
+/* countries list */
 .countryList {
   list-style: none;
   padding: 0;
@@ -70,7 +70,7 @@ h1 {
   color: #fff;
 }
 
-/* Responsivo */
+/* Responsive */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.5rem;

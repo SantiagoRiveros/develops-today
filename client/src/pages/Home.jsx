@@ -5,25 +5,25 @@ import axios from "axios";
 
 export default function Home() {
   const [countries, setCountries] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); // Nuevo estado para el loader
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_API_BASE_URL}/countries`)
       .then((data) => {
         setCountries(data.data);
-        setIsLoading(false); // Apagar el loader cuando se carguen los datos
+        setIsLoading(false);
       })
       .catch((error) => {
         console.error(error);
-        setIsLoading(false); // Apagar el loader incluso si hay error
+        setIsLoading(false);
       });
   }, []);
 
   return (
     <div className={styles.container}>
       <h1>Available Countries</h1>
-      {isLoading ? ( // Mostrar el loader mientras se cargan los datos
+      {isLoading ? (
         <div className={styles.loaderContainer}>
           <div className={styles.loader}></div>
           <p>Loading countries...</p>

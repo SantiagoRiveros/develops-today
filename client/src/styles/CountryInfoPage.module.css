@@ -1,4 +1,4 @@
-/* Estilos principales */
+/* main styles */
 .container {
   display: flex;
   flex-direction: column;
@@ -40,8 +40,8 @@
 }
 
 .loader {
-  border: 6px solid #f3f3f3; /* Color claro */
-  border-top: 6px solid #3498db; /* Color principal */
+  border: 6px solid #f3f3f3; /* light color */
+  border-top: 6px solid #3498db; /* main color */
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -58,7 +58,7 @@
   }
 }
 
-/* Enlace de regreso */
+/* go back link */
 .backLink {
   align-self: flex-start;
   margin-bottom: 20px;
@@ -71,7 +71,7 @@
   text-decoration: underline;
 }
 
-/* Lista de países fronterizos */
+/* list of border countries */
 .borderList {
   list-style: none;
   padding: 0;
@@ -99,7 +99,7 @@
   color: #fff;
 }
 
-/* Gráfica */
+/* graph */
 .chartContainer {
   width: 100%;
   max-width: 800px;
@@ -111,14 +111,14 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Mensaje de error */
+/* error message */
 .errorMessage {
   color: #d9534f;
   font-size: 1.2rem;
   text-align: center;
 }
 
-/* Responsivo */
+/* Responsive */
 @media (max-width: 768px) {
   .title {
     flex-direction: column;

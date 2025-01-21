@@ -5,7 +5,7 @@ const getAvailableCountries = async (req, res) => {
     const response = await axios.get(
       "https://date.nager.at/api/v3/AvailableCountries"
     );
-    res.json(response.data); // Devolver lista de países
+    res.json(response.data);
   } catch (error) {
     console.error("Error al obtener países disponibles:", error.message);
     res.status(500).send("Error al obtener países disponibles.");
